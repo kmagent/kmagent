@@ -1,0 +1,69 @@
+:root{
+  --km-brand:#12B886;--km-brand-dark:#0CA678;--km-brand-deep:#0B7A5E;
+  --km-soft:#E6FCF5;--km-ink:#1A1F2E;--km-mut:#5A6472;--km-line:#E5EAF0;
+  --km-bg:#F7F9FA;--km-dark:#0D1117;
+}
+
+/*
+ * Pico 品牌映射（2026-11-23）：Pico 把主题变量定义在 :root:not([data-theme=dark])
+ * （特异性 0,2,0），原先写在 :root（0,1,0）里的 --pico-primary 一直被压住，
+ * 按钮/链接实际走的仍是 Pico 默认蓝 #0172ad。这里用同等特异性选择器把
+ * primary 变量族整体映射到品牌绿；本文件在 pico.min.css 之后加载，暗色
+ * 媒体查询块同特异性也由本块压过 —— km-site 是纯浅色口径，不设暗色分支。
+ */
+:root:not([data-theme=dark]),[data-theme=light]{
+  --pico-primary:#0CA678;
+  --pico-primary-background:#0CA678;
+  --pico-primary-border:#0CA678;
+  --pico-primary-hover:#0B7A5E;
+  --pico-primary-hover-background:#0B7A5E;
+  --pico-primary-hover-border:#0B7A5E;
+  --pico-primary-focus:rgba(12,166,120,.3);
+  --pico-primary-inverse:#fff;
+  --pico-primary-underline:rgba(12,166,120,.5);
+}
+body{background:var(--km-bg);color:var(--km-ink);display:flex;flex-direction:column;min-height:100vh;margin:0}
+.wrap{width:100%;max-width:72rem;margin-inline:auto;padding-inline:1rem}
+
+.site-header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.92);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--km-line)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:3.5rem;gap:.75rem}
+.brand{display:flex;align-items:center;gap:.5rem;text-decoration:none;color:var(--km-ink);font-weight:700;font-size:1.05rem}
+.brand-logo{display:inline-flex;align-items:center;justify-content:center;width:2.25rem;height:2.25rem;border-radius:.6rem;background:linear-gradient(135deg,var(--km-brand),var(--km-brand-deep));color:#fff;font-size:.9rem;font-weight:800;flex-shrink:0}
+.site-nav{display:flex;align-items:center;gap:.9rem;font-size:.92rem}
+.site-nav a{color:var(--km-mut);text-decoration:none;white-space:nowrap}
+.site-nav a:hover{color:var(--km-brand-dark)}
+a.nav-cta{padding:.32rem .85rem;border-radius:.55rem;background:var(--km-brand);color:#fff;font-weight:600;text-decoration:none}
+a.nav-cta:hover{background:var(--km-brand-dark);color:#fff}
+
+.btn{display:inline-block;background:var(--km-brand);color:#fff;text-decoration:none;font-weight:600;padding:.6rem 1.4rem;border-radius:.6rem;font-size:.98rem;border:1px solid transparent}
+.btn:hover{background:var(--km-brand-dark);color:#fff}
+.btn-ghost{background:transparent;border:1px solid rgba(26,31,46,.28);color:var(--km-ink)}
+.btn-ghost:hover{border-color:var(--km-brand-dark);color:var(--km-brand-dark);background:transparent}
+
+.page-main{flex:1;padding:2.5rem 0 0}
+.page-head{text-align:center;margin-bottom:1.5rem}
+.page-head h1{margin:0 0 .25rem;font-size:clamp(1.5rem,4vw,2rem)}
+.page-head p{color:var(--km-mut);margin:0;font-size:.95rem}
+.page-card{background:#fff;border:1px solid var(--km-line);border-radius:.9rem;padding:1.5rem;box-shadow:0 1px 2px rgba(13,17,23,.04);margin-bottom:1rem}
+.page-card h2{margin:0 0 .75rem;font-size:1.15rem}
+.page-card p{font-size:.95rem;line-height:1.75}
+
+.auth-main{flex:1;display:flex;flex-direction:column;align-items:center;padding:2.75rem 1rem 2rem}
+.auth-card{width:100%;max-width:24rem;background:#fff;border:1px solid var(--km-line);border-radius:.9rem;padding:1.75rem 1.5rem;box-shadow:0 1px 2px rgba(13,17,23,.04)}
+.auth-head{text-align:center;margin-bottom:1.1rem}
+.auth-head h1{margin:0 0 .25rem;font-size:1.35rem}
+.auth-head p{color:var(--km-mut);font-size:.85rem;margin:0}
+.auth-alt{text-align:center;font-size:.9rem;color:var(--km-mut);margin:1.1rem 0 0}
+.hint{font-size:.8rem;color:#86909c}
+
+.site-footer{background:var(--km-dark);color:#9AA6B2;margin-top:3rem;padding:1.8rem 0}
+.footer-inner{display:flex;flex-direction:column;gap:.9rem;align-items:center;justify-content:space-between;text-align:center}
+.footer-brand{display:flex;align-items:center;gap:.5rem;color:#F0F6FC;font-weight:700}
+.footer-links{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;font-size:.88rem}
+.footer-links a{color:#9AA6B2;text-decoration:none}
+.footer-links a:hover{color:#2DD4BF}
+.footer-copy{font-size:.82rem;margin:0;color:#C9D3DC}
+
+@media (min-width:640px){
+  .footer-inner{flex-direction:row;text-align:left}
+}

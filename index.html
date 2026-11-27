@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KMAgent - 简单好用的本地知识库智能体</title>
+    <link rel="stylesheet" href="css/pico.min.css">
+    <link rel="stylesheet" href="css/km-site.css">
+    <link rel="stylesheet" href="css/km-home.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <a class="brand" href="/">
+                <span class="brand-logo">KM</span>
+                <span>KMAgent</span>
+            </a>
+            <nav class="site-nav">
+                <a href="/v">产品与价格</a>
+                <a href="/about">关于我们</a>
+                <a href="/uc/login">登录</a>
+                <a href="/uc/register" class="nav-cta">注册</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="kmHome">
+        <section class="hero">
+            <span class="hero-badge">KMAgent v1.0 发布版</span>
+            <h1>简单好用的<br>本地知识库智能体</h1>
+            <p class="tag">纯 CPU 就能跑，数据不出本地</p>
+            <p class="lead">显卡贵不存在，Token 贵不存在。</p>
+            <div class="hero-cta">
+                <a class="btn" href="/v">购买产品</a>
+                <a class="btn btn-ghost" href="https://share.weiyun.com/eFZ9ZL8B" target="_blank">下载试用</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2>四大核心优势</h2>
+                    <p>不依赖云端与高端硬件，一台普通电脑即可构建私有知识中枢。</p>
+                </div>
+                <div class="grid grid-4">
+                    <article class="card">
+                        <div class="ic"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+                        <h3>开箱即用</h3>
+                        <p>极简部署，无需专业团队和运维投入，下载解压即用。</p>
+                    </article>
+                    <article class="card">
+                        <div class="ic"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg></div>
+                        <h3>零显卡成本</h3>
+                        <p>纯 CPU 推理，一台普通电脑即可运行，显卡贵不存在。</p>
+                    </article>
+                    <article class="card">
+                        <div class="ic"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+                        <h3>数据零外传</h3>
+                        <p>全量数据本地落盘，隐私与资产自主可控，Token 贵不存在。</p>
+                    </article>
+                    <article class="card">
+                        <div class="ic"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg></div>
+                        <h3>场景全覆盖</h3>
+                        <p>垂直行业人机知识对齐、技能文档资产化管理、MCP 服务对外输出。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2>六大功能亮点</h2>
+                    <p>从知识沉淀、检索到分发，一个程序全部搞定。</p>
+                </div>
+                <div class="grid grid-3">
+                    <article class="card">
+                        <h3>树形知识库，文档资产化</h3>
+                        <p>多级分类树 + 拖拽排序 + 批量导入；每库独立 .kmdb 文件，可加密、随身拷贝。</p>
+                    </article>
+                    <article class="card">
+                        <h3>增强版 Markdown 编辑器</h3>
+                        <p>所见即所得与源码双视图实时同步；图片、音频、视频直接嵌入，可导出标准 HTML5。</p>
+                    </article>
+                    <article class="card">
+                        <h3>全文搜索，开口即得</h3>
+                        <p>基于 SQLite FTS5 中文全文索引，文档增改自动同步，关键词命中高亮。</p>
+                    </article>
+                    <article class="card">
+                        <h3>本地 AI，知识库问答</h3>
+                        <p>集成 llama.cpp，纯 CPU 加载 gguf 模型；勾选知识库即可检索增强生成——AI 只答你喂给它的知识。</p>
+                    </article>
+                    <article class="card">
+                        <h3>一键导出 WebApp</h3>
+                        <p>三套主题任选（经典 jQuery / Vue.js 动态版 / 微信扁平风格），目录树、搜索、媒体一并导出，离线可用。</p>
+                    </article>
+                    <article class="card">
+                        <h3>一键生成 Android APK</h3>
+                        <p>导出 HTML 经内置 Apktool 自动打包为 APK，知识库装进手机；无需 Android 开发环境。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2>三步上手</h2>
+                    <p>打开 KMAgent.exe → 点「新建项目」建库 → 右键新增分类与文档 → 点「AI 知识库」勾选知识库提问。就这么简单。</p>
+                </div>
+                <div class="grid grid-3">
+                    <article class="card">
+                        <div class="step-num">1</div>
+                        <h3>新建项目</h3>
+                        <p>打开 KMAgent.exe，点「新建项目」创建知识库，可加密码保护。</p>
+                    </article>
+                    <article class="card">
+                        <div class="step-num">2</div>
+                        <h3>录入文档</h3>
+                        <p>右键新增分类与文档，支持批量导入已有资料。</p>
+                    </article>
+                    <article class="card">
+                        <div class="step-num">3</div>
+                        <h3>提问检索</h3>
+                        <p>点「AI 知识库」勾选知识库，直接提问获得基于自己知识的回答。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2>适用场景</h2>
+                    <p>个人、团队与企业都能把散落的资料变成可检索、可问答的知识资产。</p>
+                </div>
+                <div class="grid">
+                    <article class="card">
+                        <h3>垂直行业知识对齐</h3>
+                        <p>把行业规范、SOP、案例喂给本地模型，新人提问即得标准答案。</p>
+                    </article>
+                    <article class="card">
+                        <h3>技能文档资产化</h3>
+                        <p>团队经验沉淀为知识库，导出 WebApp/APK 随时查阅。</p>
+                    </article>
+                    <article class="card">
+                        <h3>离线敏感数据</h3>
+                        <p>涉密文档不出本机，AI 推理全程本地，合规无忧。</p>
+                    </article>
+                    <article class="card">
+                        <h3>MCP 服务输出</h3>
+                        <p>企业版以 MCP 协议对外提供知识检索服务，接入任意智能体。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2>为什么选 KMAgent</h2>
+                </div>
+                <div class="grid" style="gap:.7rem">
+                    <p class="vs"><strong>vs 云端知识库</strong>：数据不出本地，无月租、无 Token 费用、无隐私顾虑。</p>
+                    <p class="vs"><strong>vs 裸 llama.cpp</strong>：图形化知识库管理 + 编辑器 + 导出，不用敲命令行。</p>
+                    <p class="vs"><strong>vs 在线文档工具</strong>：本地全文搜索 + 本地 AI 问答 + 一键 APK，离线可用。</p>
+                    <p class="vs"><strong>vs 自研方案</strong>：开箱即用，省去团队搭建与运维，一个人就能跑起来。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="wrap">
+                <div class="cta-card">
+                    <div>
+                        <h3>准备好让知识资产真正属于你了吗？</h3>
+                        <p>下载 KMAgent，开启你的本地知识库智能体。</p>
+                    </div>
+                    <a class="btn-light" href="/v">查看版本与价格 →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <a class="brand footer-brand" href="/">
+                <span class="brand-logo">KM</span>
+                <span>KMAgent</span>
+            </a>
+            <nav class="footer-links">
+                <a href="/v">产品与价格</a>
+                <a href="/about">关于我们</a>
+                <a href="/uc/login">用户登录</a>
+                <a href="/login">管理端登录</a>
+            </nav>
+            <p class="footer-copy">&copy; 2026 KMAgent</p>
+        </div>
+    </footer>
+</body>
+</html>
